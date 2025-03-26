@@ -5,3 +5,196 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    input.peer {
+      @apply block py-2.5 px-0 w-full text-base bg-transparent border-0 border-b-2 border-color-blue appearance-none dark:border-color-blue dark:focus:border-color-darkred focus:outline-none focus:ring-0 focus:border-color-blue text-color-dark;
+    }
+    label {
+      @apply peer-focus:font-medium absolute text-sm  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-color-darkred peer-focus:dark:text-color-darkred peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
+    }
+  }
+  @layer components {
+    .btn {
+      @apply focus:outline-none text-color-light bg-color-dark hover:bg-color-blue 
+        focus:ring-4 focus:ring-color-blue font-medium rounded-lg text-lg px-5 py-2.5 
+        mr-2 mb-2 w-[300px] mt-[15px];
+    }
+  
+    .form-container {
+      @apply mt-[10vh] mx-auto overflow-hidden relative rounded-[8px] bg-color-grey/30 dark:bg-color-dark;
+      position: relative;
+    }
+    .form-container form {
+      @apply absolute inset-[2px] rounded-[8px] bg-color-grey/50 dark:bg-color-light z-[10] flex flex-col py-[50px] px-[40px];
+    }
+  }
+  html,
+body {
+  overflow-y: auto;
+  font-family: "Bungee Spice", sans-serif;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+input {
+  color: grey !important;
+}
+.custom-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 0.2rem;
+  }
+  
+  .letter {
+    animation: bounce 1s ease-in-out infinite;
+    transform-origin: bottom;
+  }
+  
+  @media (min-width: 640px) {
+    .letter {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(8px);
+    }
+  }
+  
+  .letter:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .letter:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .letter:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .letter:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .letter:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .letter:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .letter:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .letter:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  .letter:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+  .notfound {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+  }
+  
+  .static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(
+          #000 0 0.0001%,
+          #fff 0 0.0002%,
+          #ff0000 0 0.0003%,
+          #00ff00 0 0.0004%,
+          #0000ff 0 0.0005%
+        )
+        50% 0/2500px 2500px,
+      repeating-conic-gradient(
+          #000 0 0.0001%,
+          #fff 0 0.0002%,
+          #ff0000 0 0.0003%,
+          #00ff00 0 0.0004%,
+          #0000ff 0 0.0005%
+        )
+        60% 60%/2500px 2500px;
+    background-blend-mode: difference;
+    animation: staticAnimation 0.2s infinite alternate;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .overlay {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .error-text {
+    font-size: 10rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  .subtext {
+    font-size: 3rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  
+  .instructions {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+  }
+  
+  .instructions a {
+    color: red;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .instructions a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes staticAnimation {
+    100% {
+      background-position: 50% 0, 60% 50%;
+    }
+  }
+  
+  @keyframes glitch-flicker {
+    0% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    50% {
+      opacity: 0.7;
+      transform: translateX(-3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+  }
+  

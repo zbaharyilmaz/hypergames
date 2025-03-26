@@ -7,10 +7,10 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <div>
-
-          <ToastContainer />
-          <AppRouter />
- 
+      <AuthContext>
+        <ToastContainer />
+        <AppRouter />
+      </AuthContext>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { createContext } from "react";
 
 export const AuthPage = createContext();
 const AuthContext = ({ children }) => {
-  const [currentUser, setUser] = useState();
+  const [currentUser, setCurrentUser] = useState();
   const navigate=useNavigate()
 
   useEffect(()=>{
@@ -35,11 +35,16 @@ const AuthContext = ({ children }) => {
       toastError("Something went wrong");
     }
   };
-  const logout = () => {
-    signOut(auth);
-    toastSuccess("Logout is successfully done");
-    navigate("/");
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      toastSuccess("Logout is successfully done");
+      navigate("/");
+    } catch (error) {
+      toastError("Something went wrong");
+    }
   };
+  
   const googleWith = async () => {
     const provider = new GoogleAuthProvider();
     await signInWithPopup(auth, provider)
