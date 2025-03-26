@@ -196,3 +196,37 @@ input {
     transform: translateX(3px);
   }
 }
+.card {
+  background-color: #080f36;
+  border-radius: 3px;
+  box-shadow: 4px 4px 5px rgba(63, 60, 60, 0.5);
+  overflow: hidden;
+  margin: 1rem;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 80%;
+}
+
+.card-over {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  height: 40%;
+}
+
+.card:hover .card-over {
+  transform: translateY(0%);
+}
