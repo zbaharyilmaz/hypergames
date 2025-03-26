@@ -8,8 +8,10 @@ function App() {
   return (
     <div>
       <AuthContext>
+        <ProductContext>
         <ToastContainer />
         <AppRouter />
+        </ProductContext>
       </AuthContext>
     </div>
   );

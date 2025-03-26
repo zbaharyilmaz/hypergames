@@ -27,7 +27,7 @@ const SwitchButton = () => {
         type="button"
         title="Toggle dark/light mode"
         onClick={() => toggleDarkMode()}
-        className="flex items-center text-xs m-1 font-medium bg-white hover:text-color-yellow hover:border-grey-700  dark:bg-color-dark rounded-lg  toggle-dark-state-example dark:hover:text-color-yellow dark:text-gray-100 mt-8"
+        className="flex items-center text-xs m-1 font-medium text-color-yellow hover:text-color-darkred2  dark:bg-color-dark rounded-lg  toggle-dark-state-example dark:hover:text-color-light dark:text-color-yellow mt-8"
       >
         {darkMode ? (
           <MoonIcon className="fill-current  md:h-7 md:w-7" />
