@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
 
 @tailwind base;
@@ -27,15 +26,16 @@
   .form-container {
     @apply mt-[10vh] mx-auto overflow-hidden relative rounded-[8px] bg-color-light dark:bg-color-dark w-full max-w-[400px] min-h-[450px] h-auto;
   }
-  
+
   .form-container form {
-    @apply relative rounded-[8px] bg-color-cream dark:bg-color-light z-[10] flex flex-col min-h-full flex-grow py-5 px-6 ;
+    @apply relative rounded-[8px] bg-color-cream dark:bg-color-light z-[10] flex flex-col min-h-full flex-grow py-5 px-6;
   }
 }
 html,
 body {
   overflow-y: auto;
   font-family: "Bungee Spice", sans-serif;
+  background-color: #800000;
 }
 .custom-scrollbar::-webkit-scrollbar {
   display: none;
@@ -208,13 +208,13 @@ input {
   margin: 1rem;
   width: 100%;
   cursor: pointer;
-  flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .card img {
   object-fit: cover;
   width: 100%;
-  height: 80%;
+  height: 250px;
 }
 
 .card-over {

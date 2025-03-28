@@ -23,7 +23,7 @@ const DesktopMenu = () => {
          <SwitchButton className="hidden sm:flex" />
       {currentUser ? (
         <div className="absolute inset-y-0 left-0 items-center mr-2 sm:static sm:inset-auto flex gap-1 mt-4">
-          <h5 className="bg-color-cream dark:bg-color-anthracite text-[0.7rem] text-color-darkred p-2 rounded-full shadow-sm">
+          <h5 className="bg-color-cream dark:bg-color-anthracite text-[0.7rem] text-color-darkred p-2 mt-2 rounded-full shadow-sm">
             {currentUser?.displayName}
           </h5>
           <Menu>
