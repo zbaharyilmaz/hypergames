@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,6 +35,7 @@ body {
   font-family: "Bungee Spice", sans-serif;
   background-color: #800000;
 }
+
 .custom-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -233,4 +232,22 @@ input {
 
 .card:hover .card-over {
   transform: translateY(0%);
+}
+/* 
+SAFARİ İÇİN  */
+
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    font-family: 'Bungee Spice', Arial, sans-serif;
+  }
+}
+@font-face {
+  font-family: "Bungee Spice";
+  src: url("/assets/fonts/BungeeSpice.woff2") format("woff2"),
+    url("/assets/fonts/BungeeSpice.woff") format("woff"),
+    url("/assets/fonts/BungeeSpice.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

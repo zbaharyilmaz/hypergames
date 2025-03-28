@@ -14,7 +14,7 @@ const ProductCard = ({
 
   return (
     <div
-      className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[200px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+      className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[180px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
       id="container"
     >
       <div className="relative w-full h-64">

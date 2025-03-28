@@ -33,12 +33,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-[80px] relative">
           <div className="game flex justify-center gap-4 mt-4">
             <Link className="text-3xl sm:text-4xl lg:text-5xl font-bold" to="/">
-              HYPER
-              <span className="text-color-brown dark:text-color-darkred">
-                GAMES
-              </span>
+              HYPERGAMES
               <p className="text-xs sm:text-sm lg:text-base text-center">
-                Where Gamers Meet
+                Where Gamers Meet!
               </p>
             </Link>
           </div>

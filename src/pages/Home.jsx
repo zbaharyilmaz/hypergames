@@ -33,7 +33,7 @@ const Home = () => {
           Find
         </button>
       </form>
-      <div className="grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-1 lg:grid-cols-4 lg:gap-2 xl:grid-cols-5 xl:gap-3 place-items-center overflow-x-hidden p-1">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-3 md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-2 xl:grid-cols-5 xl:gap-3 place-items-center overflow-x-hidden p-1">
         {loading ? (
           <div className="flex justify-center">
             <div className="loading-text text-center ml-60 w-1/4">
@@ -77,3 +77,4 @@ const Home = () => {
 };
 
 export default Home;
+

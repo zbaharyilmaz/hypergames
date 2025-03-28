@@ -4,11 +4,11 @@
 
 HYPERGAMES is an online platform constructed with React, Tailwind CSS and Firebase. It allows gamers to browse and buy video games, including both classic and new releases. The platform with smooth and responsive user experience guarantees a hassle-free shopping experience on all devices with its seamless navigation and effective search capabilities.
 
-👉 **Live Demo:** []
+👉 **Live Demo:** [https://hyper-games.netlify.app/]
 
 ### Demo
 
-![Project Demo]()
+![Project Demo](./public/games.gif)
 
 ### Features
 
@@ -86,7 +86,7 @@ If you'd like to run this project locally, follow these steps:
 1. **Clone the Repository and Navigate to the Project Directory:**
 
    ```bash
-   git clone
+   git clone https://github.com/zbaharyilmaz/hypergames.git
 
    cd hypergames
    ```
