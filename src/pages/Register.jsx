@@ -18,13 +18,11 @@ const Register = () => {
   };
 
   return (
-    <div className="overflow-hidden flex flex-col flex-1 h-screen justify-items-start items-center bg-color-light dark:bg-color-dark">
-      <div className="form-container w-[400px] h-[550px] overflow-hidden sm:overflow-visible">
-        <form
-          className="flex flex-col justify-center items-center h-full overflow-hidden sm:overflow-visible"
-          onSubmit={handleSubmit}
+    <div className="overflow-hidden flex flex-col flex-1 h-screen justify-items-center items-center bg-color-light dark:bg-color-dark mb-6">
+      <div className="form-container">
+        <form onSubmit={handleSubmit} 
         >
-          <h2 className="text-color4-dark text-3xl font-[500] text-center tracking-[0.1em] mb-3">
+          <h2 className="text-color4-dark text-2xl font-medium text-center tracking-[0.1em] mb-3">
             REGISTER
           </h2>
           <div className="relative z-0 w-full mb-5 group">
@@ -77,7 +75,7 @@ const Register = () => {
           </button>
           <button
             type="button"
-            className="btn flex justify-between"
+            className="btn"
             onClick={() => googleWith()}
           >
             Continue with Google
@@ -85,9 +83,12 @@ const Register = () => {
           </button>
         </form>
       </div>
-      <Link className="m-4 text-color-darkred text-xl" to="/login">
-        Do you have an account? Login
+      <div>
+          <Link className=" text-color-darkred" to="/login">
+        <p className="text-lg my-2">Do you have an account? Login</p>
       </Link>
+      </div>
+    
     </div>
   );
 };

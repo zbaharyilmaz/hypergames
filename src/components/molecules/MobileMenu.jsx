@@ -3,9 +3,6 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthPage } from "../../context/AuthContext";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 const MobileMenu = () => {
     const { logout, currentUser } = useContext(AuthPage);
     const [open, setOpen] = useState(false);

@@ -16,16 +16,20 @@
 @layer components {
   .btn {
     @apply focus:outline-none text-color-light bg-color-dark hover:bg-color-blue 
-        focus:ring-4 focus:ring-color-blue font-medium rounded-lg text-lg px-5 py-2.5 
-        mr-2 mb-2 w-[300px] mt-[15px];
+        focus:ring-4 focus:ring-color-blue font-medium rounded-lg 
+        text-base sm:text-lg lg:text-xl  
+        px-2 sm:px-5 lg:px-6        
+        py-1 sm:py-1 lg:py-2 
+        w-full 
+        mt-3 sm:mt-[15px] lg:mt-[20px];
   }
 
   .form-container {
-    @apply mt-[10vh] mx-auto overflow-hidden relative rounded-[8px] bg-color-grey/30 dark:bg-color-dark;
-    position: relative;
+    @apply mt-[10vh] mx-auto overflow-hidden relative rounded-[8px] bg-color-light dark:bg-color-dark w-full max-w-[400px] min-h-[450px] h-auto;
   }
+  
   .form-container form {
-    @apply absolute inset-[2px] rounded-[8px] bg-color-grey/50 dark:bg-color-light z-[10] flex flex-col py-[50px] px-[40px];
+    @apply relative rounded-[8px] bg-color-cream dark:bg-color-light z-[10] flex flex-col min-h-full flex-grow py-5 px-6 ;
   }
 }
 html,
