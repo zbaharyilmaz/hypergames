@@ -5,14 +5,17 @@ const Home = () => {
   const { products, setProducts, loading, search, setSearch } =
     useContext(ProductPage);
 
-  const filtered= products.filter((product)=>product.productName.toLowerCase().includes(search))
-  const handleChange = (e) => { 
-    setSearch(e.target.value.toLowerCase().trim());
-  }
-  const handleSubmit= (e) => {
+  const filtered = products.filter((product) =>
+    product.productName.toLowerCase().includes(search)
+  );
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSearch("");
-  }
+    if (input === "") {
+      setSearch("");
+    } else {
+      setInput(input);
+    }
+  };
 
   return (
     <div className="bg-color-light dark:bg-color-dark min-h-screen w-full overflow-x-hidden p-1">
@@ -22,13 +25,12 @@ const Home = () => {
       >
         <input
           type="text"
-          placeholder="games"
-          value={search}
+          placeholder="🎮 games"
           className="w-3/5 p-2 border-b-2 border-gray-400 focus:border-blue-400 dark:border-gray-500 dark:focus:border-color-light bg-transparent outline-none text-black dark:text-color-lightgrey"
-          onChange={handleChange}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <button className="m-2 px-4 py-2 text-xs w-15 bg-color-darkred text-white rounded-md hover:bg-color-anthracite">
-          Search
+          Find
         </button>
       </form>
       <div className="grid grid-cols-2 gap-1 sm:grid-cols-2 sm:gap-1 md:grid-cols-3 md:gap-1 lg:grid-cols-4 lg:gap-2 xl:grid-cols-5 xl:gap-3 place-items-center overflow-x-hidden p-1">

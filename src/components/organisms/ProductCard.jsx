@@ -17,13 +17,13 @@ const ProductCard = ({
       className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[200px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
       id="container"
     >
-       <div className="relative w-full h-64">
-      <img
-        loading="lazy"
-        src={productData.productMainImage}
-        alt=""
-        className="w-full h-64 object-contain"
-      />
+      <div className="relative w-full h-64">
+        <img
+          loading="lazy"
+          src={productData.productMainImage}
+          alt=""
+          className="w-full h-64 object-contain"
+        />
       </div>
       <div className="p-2 text-color-cream text-xs sm:text-sm md:text-base">
         <h3 className=" text-center font-semibold text-color-cream text-xs sm:text-sm md:text-base ">
