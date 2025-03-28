@@ -1,5 +1,13 @@
 import { auth } from "../auth/firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, updateProfile, onAuthStateChanged } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+  updateProfile,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { toastError, toastSuccess } from "../helpers/Toastify";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -8,11 +16,11 @@ import { createContext } from "react";
 export const AuthPage = createContext();
 const AuthContext = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
-  useEffect(()=>{
-    userTrack()
-  },[])
+  useEffect(() => {
+    userTrack();
+  }, []);
 
   const createUser = async (email, password, displayName) => {
     try {
@@ -44,7 +52,7 @@ const AuthContext = ({ children }) => {
       toastError("Something went wrong");
     }
   };
-  
+
   const googleWith = async () => {
     const provider = new GoogleAuthProvider();
     await signInWithPopup(auth, provider)
@@ -72,7 +80,20 @@ const AuthContext = ({ children }) => {
     });
   };
 
-  return <AuthPage.Provider value={{currentUser, createUser, userTrack, loginUser, googleWith, logout}}>{children}</AuthPage.Provider>;
+  return (
+    <AuthPage.Provider
+      value={{
+        currentUser,
+        createUser,
+        userTrack,
+        loginUser,
+        googleWith,
+        logout,
+      }}
+    >
+      {children}
+    </AuthPage.Provider>
+  );
 };
 
 export default AuthContext;

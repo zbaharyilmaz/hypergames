@@ -9,10 +9,8 @@ const ProductContext = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  // const [page, setPage] = useState(0);
-  // const[pageSize, setPageSize]= useState(12);
   const page = 1;
-  const pageSize = 12;
+  const pageSize = 15;
 
   const takeProducts = async () => {
     setLoading(true);

@@ -8,7 +8,7 @@ const Home = () => {
   const [input, setInput] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-      setSearch(input);
+    setSearch(input);
   };
 
   return (
@@ -27,7 +27,7 @@ const Home = () => {
           Search
         </button>
       </form>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 place-items-center overflow-x-hidden p-1">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-items-center overflow-x-hidden p-2">
         {loading ? (
           <div className="flex justify-center">
             <div className="loading-text text-center ml-60 w-1/4">
