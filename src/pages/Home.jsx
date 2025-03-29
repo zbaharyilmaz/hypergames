@@ -1,21 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ProductPage } from "../context/ProductContext";
 import ProductCard from "../components/organisms/ProductCard";
 const Home = () => {
   const { products, setProducts, loading, search, setSearch } =
     useContext(ProductPage);
-
+  const [input, setInput] = useState(search);
   const filtered = products.filter((product) =>
-    product.productName.toLowerCase().includes(search)
+    product.productName.toLowerCase().includes(input.toLowerCase())
   );
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input === "") {
-      setSearch("");
-    } else {
-      setInput(input);
-    }
+    setSearch(input);
   };
+
+  useEffect(() => {
+    setInput(search);
+  }, [search]);
 
   return (
     <div className="bg-color-light dark:bg-color-dark min-h-screen w-full overflow-x-hidden p-1">
@@ -26,8 +26,9 @@ const Home = () => {
         <input
           type="text"
           placeholder="🎮 games"
+          value={input}
           className="w-3/5 p-2 border-b-2 border-gray-400 focus:border-blue-400 dark:border-gray-500 dark:focus:border-color-light bg-transparent outline-none text-black dark:text-color-lightgrey"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
         />
         <button className="m-2 px-4 py-2 text-xs w-15 bg-color-darkred text-white rounded-md hover:bg-color-anthracite">
           Find
@@ -77,4 +78,3 @@ const Home = () => {
 };
 
 export default Home;
-

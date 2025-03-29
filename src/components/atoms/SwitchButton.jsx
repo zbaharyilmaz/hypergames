@@ -1,6 +1,6 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
-import clickSound from "../../assets/clickSound.mp3";
+import clickSound from "../../assets/sounds/clickSound.mp3";
 
 const SwitchButton = () => {
   const [darkMode, setDarkMode] = useState(
