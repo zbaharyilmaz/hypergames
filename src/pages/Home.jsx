@@ -30,7 +30,7 @@ const Home = () => {
           className="w-3/5 p-2 border-b-2 border-gray-400 focus:border-blue-400 dark:border-gray-500 dark:focus:border-color-light bg-transparent outline-none text-black dark:text-color-lightgrey"
           onChange={(e) => setInput(e.target.value)}
         />
-        <button className="m-2 px-4 py-2 text-xs w-15 bg-color-darkred text-white rounded-md hover:bg-color-anthracite">
+        <button className="m-2 px-4 py-2 text-xs w-15 bg-color-lightgrey dark:bg-color-anthracite text-white rounded-md hover:bg-color-lightgrey dark:hover:bg-color-lightgrey">
           Find
         </button>
       </form>

@@ -78,14 +78,13 @@ const Register = () => {
             className="btn"
             onClick={() => googleWith()}
           >
-            Continue with Google
-            <GoogleIcon color="currentColor" />
+            Continue with Google <GoogleIcon/>
           </button>
         </form>
       </div>
       <div>
           <Link className=" text-color-darkred" to="/login">
-        <p className="text-lg my-2">Do you have an account? Login</p>
+        <p className="text-sm my-2">Do you have an account? Login</p>
       </Link>
       </div>
     

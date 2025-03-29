@@ -1,21 +1,21 @@
 const Footer = () => {
   return (
-    <footer className="bg-color-brown py-4">
+    <footer className="bg-color-cream dark:bg-color-anthracite py-4">
       <div className="container text-center px-2 mx-auto">
         <div className="flex justify-center gap-2 text-xs">
-          <a href="#" className="hover:bg-color-darkred flex-wrap transition">
+          <a href="#" className="hover:bg-color-lightgrey flex-wrap transition">
             About
           </a>
           <span>|</span>
-          <a href="#" className="hover:bg-color-darkred flex-wrap transition">
+          <a href="#" className="hover:bg-color-lightgrey flex-wrap transition">
             Support
           </a>
           <span>|</span>
-          <a href="#" className="hover:bg-color-darkred flex-wrap transition">
+          <a href="#" className="hover:bg-color-lightgrey flex-wrap transition">
             Privacy Policy
           </a>
           <span>|</span>
-          <a href="#" className="hover:bg-color-darkred flex-wrap transition">
+          <a href="#" className="hover:bg-color-lightgrey flex-wrap transition">
             Terms of Service
           </a>
         </div>

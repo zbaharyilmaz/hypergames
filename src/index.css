@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +13,7 @@
 }
 @layer components {
   .btn {
-    @apply focus:outline-none text-color-light bg-color-dark hover:bg-color-blue 
+    @apply focus:outline-none text-color-darkred bg-color-orange hover:bg-color-lightgrey 
         focus:ring-4 focus:ring-color-blue font-medium rounded-lg 
         text-base sm:text-lg lg:text-xl  
         px-2 sm:px-5 lg:px-6        
@@ -26,14 +27,15 @@
   }
 
   .form-container form {
-    @apply relative rounded-[8px] bg-color-cream dark:bg-color-light z-[10] flex flex-col min-h-full flex-grow py-5 px-6;
+    @apply relative rounded-[8px] bg-color-cream z-[10] flex flex-col min-h-full flex-grow py-5 px-6;
   }
 }
+
 html,
 body {
   overflow-y: auto;
-  font-family: "Bungee Spice", sans-serif;
   background-color: #800000;
+  font-family: "Bungee Tint", sans-serif;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -232,22 +234,4 @@ input {
 
 .card:hover .card-over {
   transform: translateY(0%);
-}
-/* 
-SAFARİ İÇİN  */
-
-@supports (-webkit-touch-callout: none) {
-  html,
-  body {
-    font-family: 'Bungee Spice', Arial, sans-serif;
-  }
-}
-@font-face {
-  font-family: "Bungee Spice";
-  src: url("/assets/fonts/BungeeSpice.woff2") format("woff2"),
-    url("/assets/fonts/BungeeSpice.woff") format("woff"),
-    url("/assets/fonts/BungeeSpice.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }

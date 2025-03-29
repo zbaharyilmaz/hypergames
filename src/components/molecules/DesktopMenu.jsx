@@ -35,7 +35,7 @@ const DesktopMenu = () => {
               </MenuButton>
               <MenuItems
                 transition
-                className="absolute right-0 top-20 z-50 mt-2 origin-top-right rounded-md bg-color-light py-1 shadow-lg ring-1 ring-color-lightgrey transition focus:outline-none"
+                className="absolute right-0 top-20 z-50 mt-2 origin-top-right rounded-md bg-color-yellow py-1 shadow-lg ring-1 ring-color-orange transition focus:outline-none"
               >
                 <MenuItem>
                   <span
@@ -53,13 +53,13 @@ const DesktopMenu = () => {
         <div className="flex gap-2 overflow-x-auto md:w-auto custom-scrollbar my-4">
           <Link
             to="/register"
-            className="mt-8 px-4 py-2 text-sm bg-color-brown text-white rounded-md hover:bg-color-anthracite"
+            className="mt-8 px-4 py-2 text-sm bg-color-yellow text-white rounded-md hover:bg-color-lightgrey"
           >
             Register
           </Link>
           <Link
             to="/login"
-            className="mt-8 px-4 py-2 text-sm bg-color-darkred text-white rounded-md hover:bg-color-anthracite"
+            className="mt-8 px-4 py-2 text-sm bg-color-yellow text-white rounded-md hover:bg-color-lightgrey"
           >
             Login
           </Link>

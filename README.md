@@ -2,7 +2,7 @@
 
 ### Where Gamers Meet!
 
-HYPERGAMES is an online platform constructed with React, Tailwind CSS and Firebase. It allows gamers to browse and buy video games, including both classic and new releases. The platform with smooth and responsive user experience guarantees a hassle-free shopping experience on all devices with its seamless navigation and effective search capabilities.
+HYPERGAMES is an online platform constructed with React, Tailwind CSS and Firebase. It allows gamers to buy video games, including both classic and new releases. The user can find the price and details of the games on this site with smooth and responsive user experience.
 
 👉 **Live Demo:** [https://hyper-games.netlify.app/]
 
@@ -14,11 +14,9 @@ HYPERGAMES is an online platform constructed with React, Tailwind CSS and Fireba
 
 🔐 User Authentication: Secure login and registration with Firebase Authentication.
 
-🎮 Product Listing: Browse and search for video games.
+🎮 Search Functionality: Quickly find games by title.
 
-🔍 Search Functionality: Quickly find games by title.
-
-📱💻 Responsive Design: Fully responsive, optimized for mobile, tablet, and desktop views.
+📱 Responsive Design: Fully responsive, optimized for mobile, tablet, and desktop views.
 
 📄 Game Information: Detailed information about each game.
 
@@ -47,7 +45,10 @@ HYPERGAMES is an online platform constructed with React, Tailwind CSS and Fireba
 ```plaintext
 src
  ┣ assets
- ┃ ┗ clickSound.mp3
+ ┃ ┣ fonts
+ ┃ ┃ ┗ BungeeSpice-Regular.ttf
+ ┃ ┗ sounds
+ ┃ ┃ ┗ clickSound.mp3
  ┣ auth
  ┃ ┗ firebase.js
  ┣ components
@@ -56,10 +57,11 @@ src
  ┃ ┣ molecules
  ┃ ┃ ┣ DesktopMenu.jsx
  ┃ ┃ ┗ MobileMenu.jsx
- ┃ ┗ organisms
+ ┃ ┣ organisms
  ┃ ┃ ┣ Footer.jsx
  ┃ ┃ ┣ Navbar.jsx
  ┃ ┃ ┗ ProductCard.jsx
+ ┃ ┗ ErrorBoundary.jsx
  ┣ context
  ┃ ┣ AuthContext.jsx
  ┃ ┗ ProductContext.jsx
@@ -73,6 +75,7 @@ src
  ┣ router
  ┃ ┣ AppRouter.jsx
  ┃ ┗ PrivateRouter.jsx
+ ┣ .DS_Store
  ┣ App.jsx
  ┣ _redirects
  ┣ index.css
@@ -100,7 +103,6 @@ If you'd like to run this project locally, follow these steps:
    ```bash
    VITE_BASE_URL=https://your-api-base-url.com
    VITE_API_TOKEN=your_api_token
-
 4. **Set up Firebase:**
 - Go to Firebase Console, create a new project, and add a web app.
 - Enable Authentication and choose Email/Password.
@@ -114,7 +116,6 @@ If you'd like to run this project locally, follow these steps:
    VITE_STORAGE_BUCKET=your_project_id.appspot.com
    VITE_MESSAGING_SENDER_ID=your_messaging_sender_id
    VITE_APP_ID=your_firebase_app_id
-
 5. **Run the Development Server:**
 
    ```bash

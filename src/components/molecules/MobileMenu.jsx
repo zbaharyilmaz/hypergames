@@ -13,7 +13,7 @@ const MobileMenu = () => {
     }
   return (
     <div className="sm:hidden mt-4 mr-4">
-      <Disclosure.Button className="text-color-darkred dark:text-color-yellow focus:outline-none">
+      <Disclosure.Button className="text-color-anthracite dark:text-color-lightgrey focus:outline-none">
         <span className="sr-only">Open menu</span>
         <svg
           className="h-6 w-6"
@@ -33,7 +33,7 @@ const MobileMenu = () => {
       </Disclosure.Button>
       <Disclosure.Panel className="sm:hidden">
         {currentUser ? (
-          <div className="absolute right-0 z-50 origin-top-right rounded-md bg-color-light py-1 shadow-lg ring-1 ring-color-lightgrey focus:outline-none">
+          <div className="absolute right-0 z-50 origin-top-right rounded-md bg-color-yellow py-1 shadow-lg ring-1 ring-color-lightgrey focus:outline-none">
             <span
               className="block px-4 py-2 text-sm text-color-dark hover:bg-color-lightgrey cursor-alias"
               onClick={handleLogout}
@@ -42,8 +42,7 @@ const MobileMenu = () => {
             </span>
           </div>
         ) : (
-          <div className="absolute right-0 z-50 origin-top-right rounded-md bg-color-light py-1 shadow-lg ring-1 ring-color-lightgrey focus:outline-none">
-            {/* <SwitchButton className="block px-4 py-2 text-sm text-color-dark hover:bg-color-lightgrey" /> */}
+          <div className="absolute right-0 z-50 origin-top-right rounded-md bg-color-yellow py-1 shadow-lg ring-1 ring-color-lightgrey focus:outline-none">
             <span
               className="block px-4 py-2 text-sm text-color-dark hover:bg-color-lightgrey"
               onClick={() => navigate("/login")}

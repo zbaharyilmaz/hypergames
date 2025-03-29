@@ -54,14 +54,14 @@ const Login = () => {
               className="btn flex items-center gap-2"
               onClick={googleWith}
             >
-              <GoogleIcon /> Continue with Google
+             Continue with Google  <GoogleIcon color="currentColor" /> 
             </button>
           </div>
         </form>
       </div>
       <div>
       <Link className="text-color-darkred" to="/register">
-      <p className="text-lg my-2">New here? Create an account!</p>
+      <p className="text-sm my-2">New here? Create an account!</p>
       </Link>
       </div>
     </div>
