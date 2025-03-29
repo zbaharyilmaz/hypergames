@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const ProductPage = createContext();
 const ProductContext = ({ children }) => {
@@ -9,8 +10,8 @@ const ProductContext = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  const page = 1;
-  const pageSize = 15;
+  const [page, setPage] = useState(1);
+  const pageSize = 30;
 
   const takeProducts = async () => {
     setLoading(true);
@@ -35,10 +36,10 @@ const ProductContext = ({ children }) => {
   };
   useEffect(() => {
     takeProducts();
-  }, [search]);
+  }, [search, page]);
   return (
     <ProductPage.Provider
-      value={{ products, setProducts, search, setSearch, loading, setLoading }}
+      value={{ products, setProducts, search, setSearch, loading, setLoading, page, setPage }}
     >
       {children}
     </ProductPage.Provider>

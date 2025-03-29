@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-[80px] relative">
           <div className="game flex justify-center gap-4 mt-4">
-            <Link className="text-3xl sm:text-4xl lg:text-5xl font-bold" to="/">
+            <Link className="text-3xl sm:text-4xl lg:text-5xl font-bold" to="/" onClick={()=> setPage(1)}>
               HYPERGAMES
               <p className="text-xs sm:text-sm lg:text-base text-center">
                 Where Gamers Meet!

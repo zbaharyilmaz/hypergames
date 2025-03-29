@@ -53,13 +53,13 @@ const DesktopMenu = () => {
         <div className="flex gap-2 overflow-x-auto md:w-auto custom-scrollbar my-4">
           <Link
             to="/register"
-            className="mt-8 px-4 py-2 text-sm bg-color-yellow text-white rounded-md hover:bg-color-lightgrey"
+            className="mt-8 px-4 py-2 text-sm  border-color-anthracite border-[2px] bg-color-yellow text-white rounded-md hover:bg-color-lightgrey"
           >
             Register
           </Link>
           <Link
             to="/login"
-            className="mt-8 px-4 py-2 text-sm bg-color-yellow text-white rounded-md hover:bg-color-lightgrey"
+            className="mt-8 px-4 py-2 text-sm bg-color-yellow  border-color-anthracite border-[2px] text-white rounded-md hover:bg-color-lightgrey"
           >
             Login
           </Link>

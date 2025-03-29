@@ -43,43 +43,43 @@ HYPERGAMES is an online platform constructed with React, Tailwind CSS and Fireba
 ### Project Structure
 
 ```plaintext
-src
- ┣ assets
- ┃ ┣ fonts
- ┃ ┃ ┗ BungeeSpice-Regular.ttf
- ┃ ┗ sounds
- ┃ ┃ ┗ clickSound.mp3
- ┣ auth
- ┃ ┗ firebase.js
- ┣ components
- ┃ ┣ atoms
- ┃ ┃ ┗ SwitchButton.jsx
- ┃ ┣ molecules
- ┃ ┃ ┣ DesktopMenu.jsx
- ┃ ┃ ┗ MobileMenu.jsx
- ┃ ┣ organisms
- ┃ ┃ ┣ Footer.jsx
- ┃ ┃ ┣ Navbar.jsx
- ┃ ┃ ┗ ProductCard.jsx
- ┃ ┗ ErrorBoundary.jsx
- ┣ context
- ┃ ┣ AuthContext.jsx
- ┃ ┗ ProductContext.jsx
- ┣ helpers
- ┃ ┗ Toastify.js
- ┣ pages
- ┃ ┣ Home.jsx
- ┃ ┣ Login.jsx
- ┃ ┣ NotFound.jsx
- ┃ ┗ Register.jsx
- ┣ router
- ┃ ┣ AppRouter.jsx
- ┃ ┗ PrivateRouter.jsx
- ┣ .DS_Store
- ┣ App.jsx
- ┣ _redirects
- ┣ index.css
- ┗ main.jsx
+
+    src
+├── App.jsx
+├── _redirects
+├── assets
+│   └── sounds
+│       └── clickSound.mp3
+├── auth
+│   └── firebase.js
+├── components
+│   ├── ErrorBoundary.jsx
+│   ├── atoms
+│   │   ├── HoverButton.jsx
+│   │   ├── Pagination.jsx
+│   │   └── SwitchButton.jsx
+│   ├── molecules
+│   │   ├── DesktopMenu.jsx
+│   │   └── MobileMenu.jsx
+│   └── organisms
+│       ├── Footer.jsx
+│       ├── Navbar.jsx
+│       └── ProductCard.jsx
+├── context
+│   ├── AuthContext.jsx
+│   └── ProductContext.jsx
+├── helpers
+│   └── Toastify.js
+├── index.css
+├── main.jsx
+├── pages
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── NotFound.jsx
+│   └── Register.jsx
+└── router
+    ├── AppRouter.jsx
+    └── PrivateRouter.jsx
  ```
 
 ### Project Setup

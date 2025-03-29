@@ -203,7 +203,7 @@ input {
 }
 .card {
   background-color: #080f36;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 4px 4px 5px rgba(63, 60, 60, 0.5);
   overflow: hidden;
   margin: 1rem;

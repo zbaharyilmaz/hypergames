@@ -16,6 +16,7 @@
     "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "@vfx-js/core": "^0.6.0",
     "axios": "^1.8.2",
     "firebase": "^11.4.0",
     "react": "^19.0.0",

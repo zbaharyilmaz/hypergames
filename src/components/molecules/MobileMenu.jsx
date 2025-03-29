@@ -44,13 +44,13 @@ const MobileMenu = () => {
         ) : (
           <div className="absolute right-0 z-50 origin-top-right rounded-md bg-color-yellow py-1 shadow-lg ring-1 ring-color-lightgrey focus:outline-none">
             <span
-              className="block px-4 py-2 text-sm text-color-dark hover:bg-color-lightgrey"
+              className="block px-2 py-1 text-sm text-color-dark hover:bg-color-lightgrey"
               onClick={() => navigate("/login")}
             >
               Login
             </span>
             <span
-              className="block px-4 py-2 text-sm text-color-dark hover:bg-color-lightgrey"
+              className="block px-2 py-1 text-sm text-color-dark hover:bg-color-lightgrey"
               onClick={() => navigate("/register")}
             >
               Register

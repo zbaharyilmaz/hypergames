@@ -14,7 +14,7 @@ const ProductCard = ({
 
   return (
     <div
-      className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[180px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+      className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[150px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
       id="container"
     >
       <div className="relative w-full h-64">
@@ -33,7 +33,7 @@ const ProductCard = ({
       {currentUser && (
         <div>
           <p className="text-color-cream p-1 bg-color-anthracite rounded-md text-xs sm:text-sm md:text-base lg:text-base text-center mt-1 absolute bottom-0 left-0 right-0">
-            Price:{salePrice}
+            Price: {salePrice}TL
           </p>
 
           <div className="card-over custom-scrollbar p-2">
