@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthPage } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({
   productName,
@@ -11,11 +12,17 @@ const ProductCard = ({
   customerStoreProductID,
 }) => {
   const { currentUser } = useContext(AuthPage);
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    if (!currentUser) {
+      navigate("/login")}}
 
   return (
     <div
       className="card shadow-lg rounded-lg p-2 overflow-hidden w-full min-w-[150px] max-w-[250px] h-[350px] transition-transform duration-300 transform hover:scale-105 cursor-pointer"
       id="container"
+      onClick={handleClick}
     >
       <div className="relative w-full h-64">
         <img

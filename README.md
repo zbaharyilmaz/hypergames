@@ -41,9 +41,7 @@ HYPERGAMES is an online platform constructed with React, Tailwind CSS and Fireba
 🚀 pnpm: Fast, reliable, and efficient package management.
 
 ### Project Structure
-
 ```plaintext
-
     src
 ├── App.jsx
 ├── _redirects
@@ -99,7 +97,7 @@ If you'd like to run this project locally, follow these steps:
    pnpm install
    ```
 3. **Set up API**
-- Create a .env file in your project root and add the following values.
+- Create an .env file in your project root and add the following values.
    ```bash
    VITE_BASE_URL=https://your-api-base-url.com
    VITE_API_TOKEN=your_api_token
@@ -137,3 +135,6 @@ If you'd like to run this project locally, follow these steps:
 ### Contributing
 
 Feel free to fork the repo and submit PRs for improvements!
+
+
+
