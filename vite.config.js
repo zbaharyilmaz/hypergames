@@ -26,14 +26,10 @@ export default defineConfig({
           }
         },
       },
+      external: ["@vfx-js/core"],
     },
   },
   optimizeDeps: {
     include: ["@vfx-js/core"],
-  },
-  build: {
-    rollupOptions: {
-      external: ["@vfx-js/core"],
-    },
   },
 });
