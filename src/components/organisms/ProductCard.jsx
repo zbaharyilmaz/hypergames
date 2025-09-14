@@ -13,10 +13,12 @@ const ProductCard = ({
 }) => {
   const { currentUser } = useContext(AuthPage);
   const navigate = useNavigate();
-  
+
   const handleClick = () => {
     if (!currentUser) {
-      navigate("/login")}}
+      navigate("/login");
+    }
+  };
 
   return (
     <div
@@ -40,7 +42,7 @@ const ProductCard = ({
       {currentUser && (
         <div>
           <p className="text-color-cream p-1 bg-color-anthracite rounded-md text-xs sm:text-sm md:text-base lg:text-base text-center mt-1 absolute bottom-0 left-0 right-0">
-            Price: {salePrice}TL
+            {salePrice === 0 ? "FREE" : `Price: ${salePrice}TL`}
           </p>
 
           <div className="card-over custom-scrollbar p-2">
